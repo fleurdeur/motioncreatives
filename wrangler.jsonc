@@ -1,0 +1,11 @@
+{
+  "name": "motioncreatives",
+  "compatibility_date": "2026-10-09",
+  "main": "./_worker.js",
+  "observability": { "enabled": true },
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  }
+}
