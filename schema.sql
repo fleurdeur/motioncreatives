@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY, google_sub TEXT UNIQUE NOT NULL, email TEXT NOT NULL, name TEXT NOT NULL DEFAULT '', premium_until INTEGER NOT NULL DEFAULT 0, is_admin INTEGER NOT NULL DEFAULT 0, created_at INTEGER NOT NULL);
+CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);
+CREATE TABLE IF NOT EXISTS sessions(token_hash TEXT PRIMARY KEY, user_id INTEGER NOT NULL, expires_at INTEGER NOT NULL);
+CREATE TABLE IF NOT EXISTS listings(id INTEGER PRIMARY KEY, user_id INTEGER NOT NULL, title TEXT NOT NULL, category TEXT NOT NULL, description TEXT NOT NULL DEFAULT '', link TEXT NOT NULL UNIQUE, creator TEXT NOT NULL, by_creator INTEGER NOT NULL DEFAULT 0, status TEXT NOT NULL DEFAULT 'pending', created_at INTEGER NOT NULL, approved_at INTEGER NOT NULL DEFAULT 0);
+CREATE INDEX IF NOT EXISTS idx_l_status ON listings(status, approved_at DESC);
+CREATE INDEX IF NOT EXISTS idx_l_cat ON listings(category, status, approved_at DESC);
+CREATE TABLE IF NOT EXISTS favorites(user_id INTEGER NOT NULL, listing_id INTEGER NOT NULL, created_at INTEGER NOT NULL, PRIMARY KEY(user_id, listing_id));
+CREATE TABLE IF NOT EXISTS reports(id INTEGER PRIMARY KEY, listing_id INTEGER NOT NULL, reason TEXT NOT NULL, contact TEXT NOT NULL DEFAULT '', created_at INTEGER NOT NULL);
+CREATE INDEX IF NOT EXISTS idx_r_listing ON reports(listing_id);
+CREATE TABLE IF NOT EXISTS payments(provider_ref TEXT PRIMARY KEY, user_id INTEGER NOT NULL, created_at INTEGER NOT NULL);

@@ -538,6 +538,8 @@ const SECURITY = {
   'permissions-policy': 'camera=(), microphone=(), geolocation=(), payment=()',
 };
 
+import { handleLibrary } from './library.js';
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -553,6 +555,7 @@ export default {
       out.headers.set('x-content-type-options', 'nosniff');
       return out;
     }
+    if (url.pathname.startsWith('/api/')) return handleLibrary(request, env, url, ctx);
     const res = await env.ASSETS.fetch(request);
     const out = new Response(res.body, res);
     for (const [k, v] of Object.entries(SECURITY)) out.headers.set(k, v);
