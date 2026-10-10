@@ -1,0 +1,50 @@
+/* Preset Library page. Loaded together with site.css. */
+body.lib main{padding-bottom:150px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;max-width:1080px;margin:0 auto;padding:18px clamp(16px,4vw,48px)}
+body.lib h1{font:800 clamp(44px,8vw,88px)/.9 var(--d);text-transform:uppercase;margin:10px 0 8px}
+body.lib .sub{color:var(--mut);font-size:15px;max-width:60ch;margin:0 0 22px}
+body.lib button,body.lib input,body.lib select,body.lib textarea{font:inherit;color:var(--tx)}
+body.lib input,body.lib select,body.lib textarea{width:100%;background:var(--in);border:1px solid var(--ln);border-radius:12px;padding:11px 13px}
+body.lib input:focus,body.lib select:focus,body.lib textarea:focus,body.lib button:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+body.lib .btn,.chip{cursor:pointer;border-radius:999px;border:1px solid var(--ln);background:none;padding:9px 17px;font-weight:600;font-size:13px;text-decoration:none;display:inline-block;color:var(--tx)}
+body.lib .btn{background:var(--tx);color:var(--on);border-color:var(--tx);box-shadow:none}
+body.lib .btn:disabled{opacity:.5}
+.chip.on{background:var(--ac);color:var(--on);border-color:var(--ac)}
+#bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}#bar input{flex:1 1 220px;width:auto}
+#chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+#note{margin:0 0 16px;padding:12px 16px;border:1px solid var(--ln);border-radius:14px;background:var(--card);color:var(--mut)}
+#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.c{display:flex;flex-direction:column;gap:8px;padding:18px;border:1px solid var(--ln);border-radius:20px;background:var(--card);animation:up .5s both}
+@keyframes up{from{opacity:0;transform:translateY(14px)}}
+.c small{color:var(--ac2);letter-spacing:.14em;text-transform:uppercase;font-weight:600;font-size:11px}
+.c h3{font:800 28px/1 var(--d);text-transform:uppercase;margin:0;overflow-wrap:anywhere}
+.c p{margin:0;color:var(--mut);font-size:13px;overflow-wrap:anywhere}
+.c .by{color:var(--tx)}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:6px}
+.new{color:var(--on);background:var(--ac2);border-radius:6px;padding:0 7px;font-size:11px;font-weight:700;align-self:flex-start}
+#more{display:block;margin:22px auto}
+
+/* Early access: blurred previews for free accounts. The text behind the blur is made-up filler, never the real entry. */
+.c.locked{position:relative;overflow:hidden;min-height:210px}
+.c.locked .blur{display:flex;flex-direction:column;gap:8px;flex:1;filter:blur(7px);opacity:.8;transform:scale(1.02);user-select:none;pointer-events:none}
+.c.locked .fake{border:1px solid var(--ln);border-radius:999px;padding:9px 17px;font-size:13px;font-weight:600}
+.c.locked .fake.solid{background:var(--tx);color:var(--on);border-color:var(--tx)}
+.lock{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:6px;padding:16px;text-align:center;background:radial-gradient(70% 70% at 50% 50%,color-mix(in srgb,var(--bg) 55%,transparent),transparent)}
+.lock svg{width:26px;height:26px;stroke:var(--ac);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.lock b{font:800 24px/1 var(--d);text-transform:uppercase;letter-spacing:.02em}
+.lock span{font-size:12px;color:var(--mut)}
+.lock .btn{margin-top:6px}
+
+dialog{width:min(520px,calc(100vw - 24px));max-height:88svh;overflow:auto;background:var(--bg);color:var(--tx);border:1px solid var(--ln);border-radius:22px;padding:22px}
+dialog::backdrop{background:rgba(0,0,0,.65)}
+dialog h2{font:800 34px/1 var(--d);text-transform:uppercase;margin:0 0 12px}
+dialog label{display:grid;gap:5px;margin:10px 0;font-size:13px;color:var(--mut)}
+.chk{display:flex;gap:8px;align-items:flex-start}.chk input{width:auto;margin-top:3px}
+.msg{min-height:20px;margin:8px 0;color:var(--ac2)}
+.it{border-top:1px solid var(--ln);padding:12px 0;display:grid;gap:6px;overflow-wrap:anywhere}
+.it p{margin:0;color:var(--mut);font-size:13px}
+.it .tagf{justify-self:start;font-size:11px;font-weight:700;color:var(--on);background:var(--ac);border-radius:6px;padding:0 7px}
+.it select{padding:8px 10px}
+footer.lib-foot{max-width:1080px;margin:0 auto;padding:0 clamp(16px,4vw,48px) 130px;color:var(--mut);font-size:12px}
+@media(prefers-reduced-motion:reduce){.c{animation:none}}
+

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#000">
+<script src="/js/theme.js"></script>
+<title>Preset Finder | Shin's Archive</title>
+<meta name="description" content="Pull preset links and Drive XML files out of a TikTok caption, bio and comments.">
+<meta property="og:title" content="Preset Finder | Shin's Archive"><meta property="og:description" content="Pull preset links and Drive XML files out of a TikTok caption, bio and comments."><meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23000'/%3E%3Cpath d='M16 3l3 8-1 12h-4l-1-12z' fill='%237fe0ff'/%3E%3Crect x='9' y='23' width='14' height='2.5' rx='1.2' fill='%236ef0c8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css"><link rel="stylesheet" href="/css/tools.css">
+</head>
+<body class="tool" data-page="finder" data-tool="finder">
+<main class="tool-main">
+  <a class="back" href="/#work">&larr; All tools</a>
+  <h1 class="ttl">Preset Finder</h1>
+  <p class="lead">Pull preset links and Drive XML files out of a TikTok caption, bio and comments.</p>
+  
+  <section class="panel" id="finder">
+      <label>TikTok video link
+        <input id="fu" type="url" inputmode="url" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="https://www.tiktok.com/@user/video/...">
+      </label>
+      <div class="row"><button class="btn" id="fgo">Search</button><button class="btn alt" id="fpaste" type="button">Paste link</button></div>
+      <label class="share"><input id="fshare" type="checkbox" checked><span><b>Share finds with the Preset Library.</b> Alight Motion preset links and Drive XML files found in this video are sent to the library for review. Nothing shows up publicly until the admin approves it, and every entry credits the creator.</span></label>
+      <ol class="stp">
+        <li>Paste a TikTok video link</li>
+        <li>The scanner reads the caption, bio, link in bio, comments and replies</li>
+        <li>Preset links and Google Drive files (like XML) are picked out and sorted into groups</li>
+        <li>Copy the one you need. New finds also go to the Preset Library for review</li>
+      </ol>
+      <p class="msg" id="fmsg" aria-live="polite"></p>
+      <div id="fsrc" class="srcs"></div>
+      <p class="lib-note" id="flib" hidden></p>
+      <div id="fprev" class="pv" hidden>
+        <a id="fpl" class="pvimg" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="Open the video on TikTok">
+          <img id="fpi" alt="" decoding="async" referrerpolicy="no-referrer">
+          <span class="pvplay">Open on TikTok</span>
+        </a>
+        <div class="pvtx"><b id="fpn"></b><span id="fpc"></span></div>
+      </div>
+      <div id="fres"></div>
+      <div class="row" id="fall" hidden><button class="btn alt" id="fcopyall" type="button">Copy all links</button></div>
+      <details id="fpd">
+        <summary>Or paste the text yourself</summary>
+        <label>A caption, bio or comments
+          <textarea id="ftx" style="min-height:110px" placeholder="Paste any text that contains alight.link/... links"></textarea>
+        </label>
+        <div class="row"><button class="btn alt" id="fex" type="button">Extract links</button></div>
+      </details>
+    </section>
+  <nav class="others" aria-label="Other tools"><span>More tools</span><a href="/tools/svg-to-xml.html">SVG to XML</a><a href="/tools/image-to-xml.html">Image to XML</a><a href="/tools/star-maker.html">Star maker</a><a href="/tools/color-converter.html">Color converter</a><a href="/tools/xml-checker.html">XML checker</a></nav>
+</main>
+<script src="/js/common.js"></script>
+<script src="/js/tools/finder.js"></script>
+<script src="/js/site.js"></script>
+<script src="/js/fx.js"></script>
+</body>
+</html>

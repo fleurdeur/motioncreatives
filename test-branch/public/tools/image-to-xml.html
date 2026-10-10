@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#000">
+<script src="/js/theme.js"></script>
+<title>Image to XML | Shin's Archive</title>
+<meta name="description" content="Split a picture into separate vector shapes you can edit in Alight Motion. Runs on your device.">
+<meta property="og:title" content="Image to XML | Shin's Archive"><meta property="og:description" content="Split a picture into separate vector shapes you can edit in Alight Motion. Runs on your device."><meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23000'/%3E%3Cpath d='M16 3l3 8-1 12h-4l-1-12z' fill='%237fe0ff'/%3E%3Crect x='9' y='23' width='14' height='2.5' rx='1.2' fill='%236ef0c8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css"><link rel="stylesheet" href="/css/tools.css">
+</head>
+<body class="tool" data-page="tool" data-tool="img">
+<main class="tool-main">
+  <a class="back" href="/#work">&larr; All tools</a>
+  <h1 class="ttl">Image to XML</h1>
+  <p class="lead">Split a picture into separate vector shapes you can edit in Alight Motion. Runs on your device.</p>
+  <details>
+      <summary>Canvas settings</summary>
+      <div class="grid">
+        <label>Width<input id="cw" type="number" value="1080"></label>
+        <label>Height<input id="ch" type="number" value="1080"></label>
+        <label>FPS<input id="cf" type="number" value="30"></label>
+        <label>Length (ms)<input id="cd" type="number" value="2000"></label>
+        <label>Background<input id="cb" type="color" value="#ffffff"></label>
+      </div>
+    </details>
+  <section class="panel" id="img">
+      <label class="drop"><input id="ifile" type="file" accept="image/*"><b>Choose an image</b><span id="iname">PNG, JPG, WebP or GIF. Tap here or drop a file</span></label>
+      <canvas id="ipv" hidden></canvas>
+
+      <div class="grid">
+        <label>Colors<output>40</output><input id="ik" type="range" min="4" max="48" value="40"></label>
+        <label>Detail<output>600</output><input id="it" type="range" min="128" max="800" step="8" value="600"></label>
+        <label>Max shapes<output>150</output><input id="imax" type="range" min="50" max="1500" step="50" value="150"></label>
+        <label>Ignore specks<output>120</output><input id="isp" type="range" min="1" max="200" value="120"></label>
+        <label>Hair threshold<output>60</output><input id="ihair" type="range" min="10" max="200" value="60"></label>
+        <label>Background tolerance<output>10</output><input id="iwt" type="range" min="2" max="40" value="10"></label>
+        <label>Snap to shapes (0 = off)<output>88</output><input id="isn" type="range" min="0" max="98" value="88"></label>
+      </div>
+
+      <div class="row">
+        <label class="chk"><input id="ism" type="checkbox" checked>Smooth curves</label>
+        <label class="chk"><input id="iwhite" type="checkbox" checked>Remove plain background</label>
+        <label class="chk"><input id="iparts" type="checkbox" checked>Parts mode (fewer, bigger pieces)</label>
+        <label class="chk"><input id="iauto" type="checkbox" checked>Auto-tune on import</label>
+        <label class="chk"><input id="ismart" type="checkbox" checked>Smart grouping</label>
+      </div>
+
+      <div class="row"><button class="btn" id="igo">Trace to XML</button><button class="btn alt" id="iat">Auto-tune</button></div>
+      <p class="msg" id="imsg">Choose an image to split it into separate vector shapes.</p>
+      <textarea id="iout" readonly aria-label="Traced XML"></textarea>
+
+      <div class="row">
+        <button class="btn alt" data-copy="iout">Copy</button>
+        <button class="btn alt" data-dl="iout">Download .xml</button>
+      </div>
+    </section>
+  <nav class="others" aria-label="Other tools"><span>More tools</span><a href="/tools/svg-to-xml.html">SVG to XML</a><a href="/tools/star-maker.html">Star maker</a><a href="/tools/preset-finder.html">Preset Finder</a><a href="/tools/color-converter.html">Color converter</a><a href="/tools/xml-checker.html">XML checker</a></nav>
+</main>
+<script src="/js/common.js"></script>
+<script src="/js/tools/image.js"></script>
+<script src="/js/site.js"></script>
+<script src="/js/fx.js"></script>
+</body>
+</html>

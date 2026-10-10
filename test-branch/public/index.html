@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#000">
+<script src="/js/theme.js"></script>
+<title>Shin's Archive</title>
+<meta name="description" content="Shin's Archive: free tools that turn SVGs and pictures into Alight Motion XML, and find preset links in TikTok videos.">
+<meta property="og:title" content="Shin's Archive"><meta property="og:description" content="Shin's Archive: free tools that turn SVGs and pictures into Alight Motion XML, and find preset links in TikTok videos."><meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23000'/%3E%3Cpath d='M16 3l3 8-1 12h-4l-1-12z' fill='%237fe0ff'/%3E%3Crect x='9' y='23' width='14' height='2.5' rx='1.2' fill='%236ef0c8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css"><link rel="stylesheet" href="/css/home.css"><script src="https://cdn.jsdelivr.net/npm/animejs@4.0.2/dist/bundles/anime.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/motion@11.18.2/dist/motion.js"></script>
+</head>
+<body data-page="home">
+<div id="boot" aria-hidden="true"><div class="bl">SA</div><p>Shin's Archive</p><div class="bar"><i></i></div><small>warming up the tools</small></div>
+
+<main>
+  <div id="hero">
+    <div class="hc">
+      <p class="cur hero-in">currently: <b id="cur">BROWSING THE ARCHIVE</b></p>
+      <h1>Shin's Archive</h1>
+      <p class="tag hero-in">Free tools that turn vectors and pictures into Alight Motion XML.</p>
+    </div>
+  </div>
+
+  <div class="sh rv" id="work"><h2>Tools</h2></div>
+  <div id="chips">
+    <button data-f="all" aria-pressed="true">/all</button>
+    <button data-f="Convert" aria-pressed="false">/convert</button>
+    <button data-f="Make" aria-pressed="false">/make</button>
+    <button data-f="Find" aria-pressed="false">/find</button>
+    <button data-f="Utility" aria-pressed="false">/utility</button>
+  </div>
+
+  <div id="home" class="cards">
+    <a class="card" href="/tools/svg-to-xml.html" data-c="Convert"><i>CONVERT</i><b>SVG to XML</b><span>Paths, shapes, gradients and strokes</span></a>
+    <a class="card" href="/tools/image-to-xml.html" data-c="Convert"><i>CONVERT</i><b>Image to XML</b><span>Split a picture into separate vector shapes</span></a>
+    <a class="card" href="/tools/star-maker.html" data-c="Make"><i>MAKE</i><b>Star maker</b><span>Native star shapes and star grids</span></a>
+    <a class="card" href="/tools/preset-finder.html" data-c="Find"><i>FIND</i><b>Preset Finder</b><span>Pull preset links and Drive XML files out of a TikTok caption, bio and comments</span></a>
+    <a class="card" href="/tools/color-converter.html" data-c="Utility"><i>UTILITY</i><b>Color converter</b><span>Hex and opacity to #AARRGGBB</span></a>
+    <a class="card" href="/tools/xml-checker.html" data-c="Utility"><i>UTILITY</i><b>XML checker</b><span>Validate, prettify or minify</span></a>
+  </div>
+
+  <footer class="term" id="info"><b>$</b> shins-archive --status<br>ok: the XML tools run on your device<br>ok: Preset Finder sends the TikTok link you paste to this site's server. Results sit in a short cache, and presets it finds are queued for admin review in the Preset Library (you can opt out on the finder page)<br>ok: the tools need no account. The optional Preset Library uses Google sign-in<br>ok: preview images are fetched through this site, so TikTok's player is never loaded<br>ok: wallpaper art by Kabasaran. Wuthering Waves and Qingxiao belong to Kuro Games</footer>
+</main>
+<script src="/js/site.js"></script>
+<script src="/js/fx.js"></script>
+<script src="/js/home.js"></script>
+</body>
+</html>

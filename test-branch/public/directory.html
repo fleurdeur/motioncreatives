@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#000">
+<script src="/js/theme.js"></script>
+<title>Preset Library | Shin's Archive</title>
+<meta name="description" content="A community library of Alight Motion effects, shakes, text, watermarks and packs. Every entry links back to its creator.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/library.css">
+</head>
+<body class="lib" data-page="library">
+<header class="top"><a href="/" class="chip">&larr; Shin's Archive</a><div id="acct"></div></header>
+<main>
+  <h1>Preset Library</h1>
+  <p class="sub">Effects, panning, shakes, text, watermarks, transitions and packs shared by the community. Every entry links back to where its creator posted it. Presets the Preset Finder turns up are added here too once they have been reviewed.</p>
+  <div id="bar"><input id="q" type="search" placeholder="Search presets or creators" aria-label="Search"><button class="chip" id="sv">Saved</button><button class="btn" id="add">Submit a preset</button></div>
+  <div id="chips" role="group" aria-label="Categories"></div>
+  <div id="note" hidden></div>
+  <div id="grid"></div>
+  <p id="empty" class="sub" hidden>Nothing here yet. Be the first to submit one.</p>
+  <button class="chip" id="more" hidden>Load more</button>
+</main>
+<footer class="lib-foot">Signing in with Google stores your name, email, saves and submissions so the library can work. Nothing is sold. This site only links to presets and never hosts the files. Links found by the Preset Finder are reviewed by the admin before they are listed. Creators can ask for removal with the Report button on any entry.</footer>
+<dialog id="dlg"></dialog>
+<script src="/js/site.js"></script>
+<script src="/js/directory.js"></script>
+</body>
+</html>

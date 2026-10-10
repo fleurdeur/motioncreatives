@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#000">
+<script src="/js/theme.js"></script>
+<title>XML checker | Shin's Archive</title>
+<meta name="description" content="Validate, prettify or minify Alight Motion XML.">
+<meta property="og:title" content="XML checker | Shin's Archive"><meta property="og:description" content="Validate, prettify or minify Alight Motion XML."><meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23000'/%3E%3Cpath d='M16 3l3 8-1 12h-4l-1-12z' fill='%237fe0ff'/%3E%3Crect x='9' y='23' width='14' height='2.5' rx='1.2' fill='%236ef0c8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css"><link rel="stylesheet" href="/css/tools.css">
+</head>
+<body class="tool" data-page="tool" data-tool="xml">
+<main class="tool-main">
+  <a class="back" href="/#work">&larr; All tools</a>
+  <h1 class="ttl">XML checker</h1>
+  <p class="lead">Validate, prettify or minify Alight Motion XML.</p>
+  
+  <section class="panel" id="xml">
+      <label>Paste Alight Motion XML<textarea id="xin" placeholder="<scene ...>"></textarea></label>
+      <div class="row">
+        <button class="btn" id="xchk">Check</button>
+        <button class="btn alt" id="xpre">Prettify</button>
+        <button class="btn alt" id="xmin">Minify</button>
+        <button class="btn alt" data-dl="xin">Download .xml</button>
+      </div>
+      <p class="msg" id="xmsg"></p>
+    </section>
+  <nav class="others" aria-label="Other tools"><span>More tools</span><a href="/tools/svg-to-xml.html">SVG to XML</a><a href="/tools/image-to-xml.html">Image to XML</a><a href="/tools/star-maker.html">Star maker</a><a href="/tools/preset-finder.html">Preset Finder</a><a href="/tools/color-converter.html">Color converter</a></nav>
+</main>
+<script src="/js/common.js"></script>
+<script src="/js/tools/xml.js"></script>
+<script src="/js/site.js"></script>
+<script src="/js/fx.js"></script>
+</body>
+</html>
